@@ -123,5 +123,5 @@ body {
 .bg-primary{background-color: #5048e5 !important;}
 .bg-secondary{background-color: #e6e3e3 !important;}
 .bg-success{background-color: #14b8a6 !important;}
-.info{background-color: #ffb020 !important;}
-.danger{background-color: #ff0000 !important;}
+.bg-info{background-color: #ffb020 !important;}
+.bg-danger{background-color: #ff0000 !important;}
