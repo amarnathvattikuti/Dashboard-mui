@@ -11,9 +11,58 @@ import PeopleIcon from '@mui/icons-material/People';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ReceiptIcon from '@mui/icons-material/Receipt';
-
+import { useNavigate } from "react-router-dom";
 
 const AccordianList = () => {
+
+    const navigate = useNavigate();
+    const customerList = [
+        {
+            text: 'List',
+            onClick: () => navigate('/list')
+        },
+        {
+            text: 'Details',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Edit',
+            onClick: () => navigate('/')
+        }
+    ]
+
+    const productList = [
+        {
+            text: 'List',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Create',
+            onClick: () => navigate('/')
+        }
+    ]
+
+    const orderList = [
+        {
+            text: 'List',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Details',
+            onClick: () => navigate('/')
+        }
+    ]
+    const invoiceList = [
+        {
+            text: 'List',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Details',
+            onClick: () => navigate('/')
+        }
+    ]
+
     return (
         <>
             <Accordion>
@@ -22,22 +71,26 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <PeopleIcon 
-                        style={{marginRight: "25px"}}
-                        />
+                    <PeopleIcon
+                        style={{ marginRight: "25px" }}
+                    />
                     <Typography>
-                        
+
                         Customers
-                        </Typography>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    {['List', 'Details', 'Edit'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>                            
+                    {customerList.map((item, index) => {
+                        const { text, onClick } = item;
+                        return (<ListItem key={text} disablePadding onClick={onClick}>
+                            <ListItemButton>
                                 <ListItemText primary={text} />
                             </ListItemButton>
                         </ListItem>
-                    ))}
+
+                        )
+                    }
+                    )}
                 </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -46,21 +99,24 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ShoppingBagIcon 
-                        style={{marginRight: "25px"}}
-                        />
-                    <Typography>                      
+                    <ShoppingBagIcon
+                        style={{ marginRight: "25px" }}
+                    />
+                    <Typography>
                         Products
-                        </Typography>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    {['List', 'Create'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>                            
+                    {productList.map((item, index) => {
+                        const {text, onClick} = item;
+                    return (
+                        <ListItem key={text} disablePadding onClick={onClick}>
+                            <ListItemButton>
                                 <ListItemText primary={text} />
                             </ListItemButton>
                         </ListItem>
-                    ))}
+                    )}
+                    )}
                 </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -69,21 +125,23 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ShoppingCartIcon 
-                        style={{marginRight: "25px"}}
-                        />
-                    <Typography>                      
-                        Orderss
-                        </Typography>
+                    <ShoppingCartIcon
+                        style={{ marginRight: "25px" }}
+                    />
+                    <Typography>
+                        Orders
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    {['List', 'Details'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>                            
+                    {orderList.map((item, index) => {
+                     const {text, onClick} = item;
+                    return (
+                        <ListItem key={text} disablePadding onClick={onClick}>
+                            <ListItemButton>
                                 <ListItemText primary={text} />
                             </ListItemButton>
                         </ListItem>
-                    ))}
+                    )})}
                 </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -92,21 +150,23 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ReceiptIcon 
-                        style={{marginRight: "25px"}}
-                        />
-                    <Typography>                      
+                    <ReceiptIcon
+                        style={{ marginRight: "25px" }}
+                    />
+                    <Typography>
                         Invoices
-                        </Typography>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    {['List', 'Details'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>                            
+                    {invoiceList.map((item, index) => {
+                        const {text, onClick} = item;
+                        return(
+                        <ListItem key={text} disablePadding onClick={onClick}>
+                            <ListItemButton>
                                 <ListItemText primary={text} />
                             </ListItemButton>
                         </ListItem>
-                    ))}
+                    )})}
                 </AccordionDetails>
             </Accordion>
         </>

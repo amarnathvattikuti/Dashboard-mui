@@ -13,13 +13,41 @@ import AccordianList from '../subComponent/accordianList';
 import Divider from '@mui/material/Divider';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Chip from '@mui/material/Chip';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const DrawerCont = () => {
+    const navigate = useNavigate();
+
+    const generalItems = [
+        {
+            text: 'Overview',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Analytics',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Finance',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Logistics',
+            onClick: () => navigate('/')
+        },
+        {
+            text: 'Account',
+            onClick: () => navigate('/')
+        }
+    ];
+
+
     return (
         <div>
-            <img src={Logo} alt="logo"
-                style={{ width: "20%", margin: "17px 20px" }}
-            />
+            <img src={Logo}
+            className="logo" alt="logo" />
             <ListItemButton
                 style={{
                     backgroundColor: "#1a212f",
@@ -56,34 +84,38 @@ const DrawerCont = () => {
                 GENERAL
             </div>
             <List>
-                {['Overview', 'Analytics', 'Finance', 'Logistics', 'Account'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index === 0 ? <HomeIcon style={{ color: "#ebeced" }} /> : ""}
-                                {index === 1 ? <BarChartOutlinedIcon style={{ color: "#ebeced" }} /> : ""}
-                                {index === 2 ? <PieChartIcon style={{ color: "#ebeced" }} /> : ""}
-                                {index === 3 ? <LocalShippingIcon style={{ color: "#ebeced" }} /> : ""}
-                                {index === 4 ? <AccountCircleIcon style={{ color: "#ebeced" }} /> : ""}
-                            </ListItemIcon>
-                            <ListItemText primary={text}>
-                                
-                            </ListItemText>
+                {generalItems.map((item, index) => {
+                    const { text, onClick } = item;
+                    return (
+                        <ListItem key={text} disablePadding onClick={onClick}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    {index === 0 ? <HomeIcon /> : ""}
+                                    {index === 1 ? <BarChartOutlinedIcon /> : ""}
+                                    {index === 2 ? <PieChartIcon /> : ""}
+                                    {index === 3 ? <LocalShippingIcon /> : ""}
+                                    {index === 4 ? <AccountCircleIcon /> : ""}
+                                </ListItemIcon>
+                                <ListItemText primary={text}>
+
+                                </ListItemText>
                                 {
                                     index === 3 ?
-                                    <Chip label="New"  size="small" 
-                                    style={{
-                                        backgroundColor: "#10b981", 
-                                        color: "white",
-                                        marginTop: "5px",
-                                        fontWeight: "600",
-                                        paddingTop: "3px"
-                                    }}
-                                    /> : null
+                                        <Chip label="New" size="small"
+                                            style={{
+                                                backgroundColor: "#10b981",
+                                                color: "white",
+                                                marginTop: "5px",
+                                                fontWeight: "600",
+                                                paddingTop: "3px"
+                                            }}
+                                        /> : null
                                 }
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                            </ListItemButton>
+                        </ListItem>
+                    )
+                }
+                )}
             </List>
 
             <List>

@@ -1,52 +1,127 @@
-body{ margin: 0px;}
-.subTitle{
-  position: absolute;
-  left: 80px; top:40px; font-size: 14px; color: #ccc;
+body {
+  margin: 0px;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #21293a; 
+} 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #353d50;
+  border-radius:4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #54607e; 
+}
+
+.subTitle {
+  position: absolute;
+  left: 80px;
+  top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
+.logo{
+  width: "20%";  margin: "30px 20px"
+}
+
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
-.css-1imw6t8-MuiDrawer-docked .MuiDrawer-paper{
+.css-1imw6t8-MuiDrawer-docked .MuiDrawer-paper {
   background-color: #111827 !important;
   color: rgb(209, 213, 219) !important;
 }
-.css-h4y409-MuiList-root{
+
+.css-h4y409-MuiList-root {
   padding: 10px !important;
 }
-.css-1nxmd3h-MuiListItem-root:hover{
+
+.css-1nxmd3h-MuiListItem-root:hover {
   background-color: rgb(36 42 56);
   cursor: pointer;
   width: 95%;
   border-radius: 10px;
 }
-.css-10hburv-MuiTypography-root,.css-ahj2mt-MuiTypography-root{
+
+.css-10hburv-MuiTypography-root,
+.css-ahj2mt-MuiTypography-root {
   font-weight: 600 !important;
 }
-.css-yw020d-MuiAccordionSummary-expandIconWrapper{
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
   color: #ccc !important;
 }
+
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root:first-of-type,
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type,
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root
-{
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background: transparent !important;
   color: #ccc !important;
   box-shadow: none !important
 }
+
 .css-1whpjm6-MuiToolbar-root {
   position: absolute !important;
   width: 92.5% !important;
   z-index: 1010 !important;
   right: 25px !important;
   background: #eaecee !important;
-  margin-top:-7px;
+  margin-top: -7px;
 }
-.css-pjjt8i-MuiToolbar-root{
+
+.css-pjjt8i-MuiToolbar-root {
   display: none !important;
 }
-.css-15wwp11-MuiTableHead-root{
+
+.css-15wwp11-MuiTableHead-root {
   background-color: #f3f4f6;
 }
-
-.apexcharts-legend-series, .apexcharts-datalabels{
+.apexcharts-legend-series,
+.apexcharts-datalabels {
   display: none;
 }
+.css-1l48ik7 .MuiDrawer-paper, .css-10pjl5o .MuiDrawer-paper, .css-wf16b5 {
+  background: #111827 !important;
+  color: #fff !important;
+}
+.css-67l5gl,
+.css-67l5gl.Mui-expanded {
+  background: transparent !important;
+  color: #ebeced !important;
+}
+.css-1fx8m19{
+  display: flex;
+  color: #d9d3d38a !important;
+}
+.css-1tpp0wj{
+  display: flex;
+}
+.css-1tpp0wj:hover{
+  background: #262c3b;
+}
+.Mui-selected{
+  color: #10b981;
+}
+.css-cveggr-MuiListItemIcon-root{
+  display: flex;
+  color: #ebeced !important;
+}
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+  opacity: 0 !important;
+}
 
+.primary{color: #5048e5 !important}
+.secondary{color:#e6e3e3 !important}
+.success{color: #14b8a6 !important}
+.info{color: #ffb020 !important}
+.danger{color: #ff0000 !important;}
+
+.bg-primary{background-color: #5048e5 !important;}
+.bg-secondary{background-color: #e6e3e3 !important;}
+.bg-success{background-color: #14b8a6 !important;}
+.info{background-color: #ffb020 !important;}
+.danger{background-color: #ff0000 !important;}

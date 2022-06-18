@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 //import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -25,13 +25,15 @@ import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import DrawerCont from './subComponent/drawer';
 
+
 const drawerWidth = 280;
 const settings = ['Profile', 'Settings', 'Change organisation'];
+
 function ResponsiveDrawer(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
