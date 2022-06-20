@@ -134,10 +134,8 @@ function ResponsiveDrawer(props) {
                   </MenuItem>
                 ))}
                 <Divider className='py-10 border-solid border-secondary'/>
-                <MenuItem
-                  style={{ padding: "10px 30px" }}
-                >
-                  <LogoutOutlinedIcon style={{ marginRight: "10px" }} /> Logout
+                <MenuItem className='py-1 px-3'>
+                  <LogoutOutlinedIcon className='mr-3' /> Logout
                 </MenuItem>
               </Menu>
             </Box>
