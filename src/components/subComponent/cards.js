@@ -26,21 +26,17 @@ export default function Cards() {
     const newCardData = data.map((el) => {
         return (
             <>
-                <Grid item xs={12} md={6} key={el.id}>
-                    <Item>
-                        <h4 style={{color: "#5048e5"}}>
+                <Grid item xs={12} md={6} key={el.id} className="py-4 px-4">
+                    <Item className="py-2 px-4">
+                        <h4 className="text-primary">
                            {el.cardname === 'Jobs' ? <ShoppingBasketIcon/> : null}
                            {el.cardname === 'Help Center' ? <InfoOutlinedIcon/> : null}
                            {el.cardname === 'Download' ? <FileDownloadIcon/> : null}
                            {el.cardname === 'Contacts' ? <PeopleIcon/> : null}
-                            <span
-                            style={{
-                                position: "absolute", marginTop: "2px", marginLeft: "5px"
-                            }}
-                            >{el.cardname}</span>
+                            <span className='absolute mt-1 ml-2'>{el.cardname}</span>
                         </h4>
-                        <h2>{el.title}</h2>
-                        <p>{el.desc}</p>
+                        <h2 className='text-xl font-semibold pt-4'>{el.title}</h2>
+                        <p className='pb-4 opacity-80'>{el.desc}</p>
                         <Divider 
                          style={{margin: "15px 0px"}}
                         />

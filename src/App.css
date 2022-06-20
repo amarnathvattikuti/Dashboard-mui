@@ -25,17 +25,12 @@ body {
 
 .subTitle {
   position: absolute;
-  left: 80px;
-  top: 40px;
+  left: 70px;
+  top: 32px;
   font-size: 14px;
   color: #ccc;
 }
-
-.logo {
-  width: "20%";
-  margin: "30px 20px"
-}
-
+.css-1uwgr7b-MuiTypography-root{ padding-left: 10px;}
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
 .css-1imw6t8-MuiDrawer-docked .MuiDrawer-paper {
   background-color: #111827 !important;
@@ -137,44 +132,4 @@ body {
   border-radius: 10px;
   margin: auto;
   width: 97%;
-}
-
-.primary {
-  color: #5048e5 !important
-}
-
-.secondary {
-  color: #e6e3e3 !important
-}
-
-.success {
-  color: #14b8a6 !important
-}
-
-.info {
-  color: #ffb020 !important
-}
-
-.danger {
-  color: #ff0000 !important;
-}
-
-.bg-primary {
-  background-color: #5048e5 !important;
-}
-
-.bg-secondary {
-  background-color: #e6e3e3 !important;
-}
-
-.bg-success {
-  background-color: #14b8a6 !important;
-}
-
-.bg-info {
-  background-color: #ffb020 !important;
-}
-
-.bg-danger {
-  background-color: #ff0000 !important;
 }

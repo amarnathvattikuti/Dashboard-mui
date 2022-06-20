@@ -289,6 +289,7 @@ export default function CustomerDataTable() {
                                             tabIndex={-1}
                                             key={row.name}
                                             selected={isItemSelected}
+                                            className="h-16"
                                         >
                                             <TableCell padding="checkbox">
                                                 <Checkbox
@@ -306,44 +307,29 @@ export default function CustomerDataTable() {
                                                 padding="none"
                                             >
                                                 <img src={row.image} alt="customer"
-                                                 style={{
-                                                    width: "35px",
-                                                    borderRadius: "50%",
-                                                    marginRight:"7px"
-                                                }}
+                                                className="w-8 mr-3 inline-block"
+                                                    style={{ borderRadius: "50%", marginTop: "-20px"}}
                                                 />
-                                                <span
-                                                 style={{
-                                                    position: "absolute",
-                                                 }}
-                                                >
-                                                {row.name}
-                                                </span>
-                                                <span
-                                                style={{
-                                                    fontSize:"13px",
-                                                    color: "#65748b"
-                                                }}
-                                                >{row.email}</span>
-                                               
+                                                <div className="inline-block">
+                                                    {row.name}
+                                                    <br />
+                                                    <span
+                                                        className="font-xs text-lightdark opacity-60">
+                                                        {row.email}
+                                                    </span>
+                                                </div>
+
                                             </TableCell>
                                             <TableCell align="left">{row.location}</TableCell>
                                             <TableCell align="left">{row.order}</TableCell>
                                             <TableCell align="left"
-                                               style={{color: "#10b981"}}
-                                            >$ {row.spent}.00</TableCell>
+                                              className="text-success" >$ {row.spent}.00</TableCell>
                                             <TableCell align="left">
                                                 < img src={edit} alt="edit"
-                                                style={{
-                                                    cursor: "pointer",
-                                                    width: "20px",
-                                                    marginRight: "15px"
-                                                }}
-                                                /> 
+                                                    className="cursor-pointer w-5 mr-2 inline-block" />
                                                 <ArrowForwardOutlinedIcon
-                                                style={{cursor: "pointer", color: "#6b7280"}}
-                                                /> 
-                                                </TableCell>
+                                                    className="cursor-pointer text-lightdark opacity-80" />
+                                            </TableCell>
                                         </TableRow>
                                     );
                                 })}

@@ -19,37 +19,20 @@ const ListView = () => {
                 <Toolbar />
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                        <h2>Customers</h2>
+                        <h2 className="text-3xl font-semibold mt-3">Customers</h2>
                     </Grid>
-                    <Grid item xs={12} md={6}
-                        style={{
-                            textAlign: "right",
-
-                            marginTop: "25px"
-                        }}
-                    >
-                        <Button
-                            style={{
-                                textTransform: 'none',
-                                padding: "7px 25px",
-                                borderRadius: "10px"
-                            }}
+                    <Grid item xs={12} md={6} className="text-right mt-5">
+                        <Button className="normal-case py-2 px-7 rounded-md"
                             variant="contained">+ Add</Button>
                     </Grid>
                     <Grid item xs={12}>
                         <Button color="primary" startIcon={<FileUploadIcon />}
-                            style={{
-                                textTransform: "none",
-                                marginRight: "30px"
-                            }}
-                        >Import</Button>
+                          className="normal-case mr-3" >Import</Button>
                         <Button color="primary" startIcon={<DownloadIcon />}
-                            style={{ textTransform: "none" }}
+                           className="normal-case"
                         >Export</Button>
                     </Grid>
-                    <Grid item xs={12}
-                        style={{marginTop: "30px"}}
-                    >
+                    <Grid item xs={12} className="mt-3">
                         <UserTable />
                     </Grid>
                 </Grid>

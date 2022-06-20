@@ -40,11 +40,7 @@ const UserTable = () => {
     return (
         <Box sx={{ width: '100%' }}>
             <Grid container>
-                <Grid item xs={12}
-                    style={{
-                        borderBottom: "1px solid #ccc"
-                    }}
-                >
+                <Grid item xs={12} className="border-b border-b-silver">
                     <Tabs
                         value={value}
                         onChange={handleChange}
@@ -52,23 +48,17 @@ const UserTable = () => {
                         indicatorColor="primary"
                         aria-label="secondary tabs example"
                     >
-                        <Tab value="all" label="All" style={{textTransform: "none"}} />
+                        <Tab value="all" label="All" className="normal-case" />
                         <Tab value="AcceptsMarketing" label="Accepts Marketing" 
-                        style={{textTransform: "none"}}/>
-                        <Tab value="Prospect" label="Prospect" 
-                        style={{textTransform: "none"}}/>
-                        <Tab value="Returning" label="Returning" 
-                        style={{textTransform: "none"}}/>
+                        className="normal-case"/>
+                        <Tab value="Prospect" label="Prospect" className="normal-case"/>
+                        <Tab value="Returning" label="Returning" className="normal-case"/>
                     </Tabs>
                 </Grid>
             </Grid>
             <Box sx={{ width: '100%' }}>
                 <Grid container>
-                    <Grid item xs={12} sm={9}
-                        style={{
-                            padding: "25px 10px"
-                        }}
-                    >
+                    <Grid item xs={12} sm={9} className="py-4 px-2">
                         <FormControl sx={{ m: 1, width: '100%' }} variant="outlined">
                             <InputLabel htmlFor="Search customers">Search customers</InputLabel>
                             <OutlinedInput
@@ -90,11 +80,7 @@ const UserTable = () => {
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item xs={12} sm={3}
-                     style={{
-                        padding: "35px 10px"
-                    }}
-                    >
+                    <Grid item xs={12} sm={3} className="py-3 px-2 mt-3">
                         <FormControl fullWidth>
                             <InputLabel id="Sort">Sort</InputLabel>
                             <Select

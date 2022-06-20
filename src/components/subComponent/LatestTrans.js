@@ -23,51 +23,34 @@ export default function LatestTrans() {
   const newData = data.slice(0, 5).map((item) => {
     return (
       <>
-        <table
-          style={{
-            padding: "10px 15px",
-            borderTop: "1px solid #ccc",
-            width: "100%"
-          }} key={item.id}
-        >
-          <tr style={{ borderBottom: "1px solid #efefef" }}>
-            <td style={{
-              width: "50px",
-              background: "#e5e7eb",
-              borderRadius: "15px",
-              textAlign: "center"
-            }}>
-              {(item.date).slice(0, 6)}
+        <table className='w-full boder-solid border-t-secondary border-t table-fixed'>
+          <tr className='py-5'>
+            <td className='w-12 h-16'>
+              <span className='bg-silver rounded-xl text-center w-12 p-1 block'>
+                {(item.date).slice(0, 6)}</span>
+              
             </td>
-            <td style={{ width: "310px", paddingLeft: "20px" }}>
-              {item.name} <br /> <span
-                style={{ color: "#a6aab2" }}
-              >{item.paymentMode}</span>
+            <td className='w-72 pl-4'>
+              {item.name} <br /> <span className='text-lightdark opacity-50'>{item.paymentMode}</span>
             </td>
-            <td style={{ width: "130px" }}>
+            <td className='w-15'>
               {item.Status === 'Success' ?
-                <Chip label="Success"
-                  style={{ background: "#14b8a6", color: "white" }}
-                /> : null}
+                <Chip label="Success" className='bg-success text-white'/> : null}
               {item.Status === 'On hold' ?
-                <Chip label="on hold" color="primary"
-                  style={{ background: "#ffb020", color: "white" }}
-                /> : null}
+                <Chip label="on hold" color="primary" className='bg-info text-white' /> : null}
               {item.Status === 'fail' ? <Chip label="Failed"
-                variant="outlined"
-                style={{ background: "red", color: "white" }}
-              /> : null}
+                variant="outlined" className='bg-danger text-white'/> : null}
             </td>
             <td>
 
               {item.Status === "Success" ?
-                <span style={{ color: "#14b8a6" }}>${item.spent}.00</span> : null
+                <span  className='text-success'>${item.spent}.00</span> : null
               }
               {item.Status === "On hold" ?
-                <span style={{ color: "#ffb020" }}>${item.spent}.00</span> : null
+                <span className='text-info'>${item.spent}.00</span> : null
               }
               {item.Status === "fail" ?
-                <span style={{ color: "red" }}>${item.spent}.00</span> : null
+                <span className='text-danger'>${item.spent}.00</span> : null
               }
             </td>
           </tr>
@@ -80,38 +63,17 @@ export default function LatestTrans() {
   const mailData = data.slice(0, 5).map((element) => {
     return (
       <>
-        <table key={element.id}
-          style={{
-            padding: "10px 20px",
-            width: "100%"
-          }}
-        >
-          <tr>
+        <table key={element.id} className="p-5 w-full border-b border-b-silver">
+          <tr className='h-16'>
             <td>
               <img src={element.image} alt="pic"
-                style={{
-                  width: "35px",
-                  borderRadius: "50%"
-                }}
+                style={{width: "35px", borderRadius: "50%"}}
               />
             </td>
-            <td
-              style={{
-                paddingLeft: "5px",
-                width: "180px"
-              }}
-            >
-              <span
-                style={{ color: "#3d4241" }}
-              >{element.name}</span><br />{element.description}</td>
-            <td
-              style={{
-                color: "#5a6160",
-                fontWeight: 300,
-                fontSize: "10px",
-                textAlign: "right"
-              }}
-            >{(element.date).slice(0, 10)}</td>
+            <td className="pl-1 w-50">
+              <span >{element.name}</span><br />
+              <span className="text-lightdark opacity-60">{element.description}</span></td>
+            <td className='text-lightdark opacity-50 font-light font-xs text-right'  >{(element.date).slice(0, 10)}</td>
           </tr>
         </table>
       </>
@@ -124,13 +86,9 @@ export default function LatestTrans() {
       <Grid container spacing={3}>
         <Grid item xs={8}>
           <Item>
-            <h2>Latest Transactions</h2>
+            <h2 className='text-xl font-bold py-5'>Latest Transactions</h2>
 
-            <Grid container item xs={12}
-              style={{
-                background: "#efefef", padding: "7px 10px"
-              }}
-            >
+            <Grid container item xs={12} className="bg-silver py-3 px-4">
               <Grid item xs={12} md={9}>Transaction</Grid>
               <Grid item xs={12} md={3}
                 style={{ textAlign: "left" }}
@@ -141,13 +99,11 @@ export default function LatestTrans() {
         </Grid>
         <Grid item xs={4}>
           <Item>
-            <h2>inbox</h2>
+            <h2 className="py-4 text-xl font-bold border-b border-b-silver mb-5">inbox</h2>
 
             {mailData}
              <Divider/>
-            <Button size="small"
-            style={{textTransform: "none", padding: "20px 10px"}}
-            >Go to chat</Button>
+            <Button size="small" className='normal-case py-7 px-5'>Go to chat</Button>
           </Item>
         </Grid>
 

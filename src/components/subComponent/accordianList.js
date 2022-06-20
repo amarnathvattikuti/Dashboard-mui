@@ -71,9 +71,7 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <PeopleIcon
-                        style={{ marginRight: "25px" }}
-                    />
+                    <PeopleIcon className="mr-6"/>
                     <Typography>
 
                         Customers
@@ -99,9 +97,7 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ShoppingBagIcon
-                        style={{ marginRight: "25px" }}
-                    />
+                    <ShoppingBagIcon className="mr-6"/>
                     <Typography>
                         Products
                     </Typography>
@@ -125,9 +121,7 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ShoppingCartIcon
-                        style={{ marginRight: "25px" }}
-                    />
+                    <ShoppingCartIcon className="mr-6"/>
                     <Typography>
                         Orders
                     </Typography>
@@ -150,9 +144,7 @@ const AccordianList = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <ReceiptIcon
-                        style={{ marginRight: "25px" }}
-                    />
+                    <ReceiptIcon className="mr-6"/>
                     <Typography>
                         Invoices
                     </Typography>

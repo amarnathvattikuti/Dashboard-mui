@@ -47,40 +47,15 @@ const DrawerCont = () => {
     return (
         <div>
             <img src={Logo}
-            className="logo" alt="logo" />
+            className="my-4 mx-2" alt="logo" />
             <ListItemButton
-                style={{
-                    backgroundColor: "#1a212f",
-                    width: "240px",
-                    margin: "auto",
-                    height: "70px",
-                    borderRadius: "10px"
-                }}
+             className="w-60 bg-lightdark m-auto py-4 px-5 h-20 rounded-md block"
             >
-                <h4
-                    style={{ position: "absolute", top: "-7px" }}
-                >Acme Inc </h4>
-                <span style={{
-                    fontSize: "13px",
-                    position: "absolute",
-                    top: "38px",
-                    color: "#9fa0a4"
-                }}>your tier: premium</span>
+                <h4 className="w-100 font-semibold text-white">Acme Inc </h4>
+                <p className="text-secondary text-sm opacity-70">Your tier : premium</p>
             </ListItemButton>
-            <Divider
-                style={{
-                    border: "1px solid #1e2534",
-                    margin: "30px 0px",
-                    background: "#1c2436 !important"
-                }} />
-            <div
-                style={{
-                    fontSize: "12px",
-                    color: "#6b7280",
-                    paddingLeft: "30px",
-                    paddingTop: "20px",
-                    fontWeight: "600"
-                }}>
+            <Divider className="py-5 border-lightdark"/>
+            <div className="font-semibold pt-6 pl-6 text-xs text-secondary opacity-50">
                 GENERAL
             </div>
             <List>
@@ -102,13 +77,7 @@ const DrawerCont = () => {
                                 {
                                     index === 3 ?
                                         <Chip label="New" size="small"
-                                            style={{
-                                                backgroundColor: "#10b981",
-                                                color: "white",
-                                                marginTop: "5px",
-                                                fontWeight: "600",
-                                                paddingTop: "3px"
-                                            }}
+                                            className="bg-success text-white"
                                         /> : null
                                 }
                             </ListItemButton>
@@ -119,15 +88,7 @@ const DrawerCont = () => {
             </List>
 
             <List>
-                <div
-                    style={{
-                        fontSize: "12px",
-                        color: "#6b7280",
-                        paddingLeft: "20px",
-                        paddingTop: "15px",
-                        paddingBottom: "15px",
-                        fontWeight: "600"
-                    }}>
+                <div className="py-4 pl-5 text-xs text-secondary opacity-60">
                     MANAGEMENT
                 </div>
                 <AccordianList />

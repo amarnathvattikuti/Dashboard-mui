@@ -60,10 +60,7 @@ function ResponsiveDrawer(props) {
             width: { xl: `calc(100% - ${drawerWidth}px)` },
             ml: { xl: `${drawerWidth}px` },
           }}
-          style={{
-            backgroundColor: "white",
-            boxShadow: "2px 2px 2px #e9e6e6"
-          }}
+          className="bg-white shadow"
         >
           <Toolbar>
             <Box sx={{ flexGrow: 1, display: { xl: 'flex' } }}>
@@ -80,9 +77,7 @@ function ResponsiveDrawer(props) {
             </Box>
             <Box sx={{ flexGrow: 0 }} >
               <IconButton>
-                <img src={Ukflag}
-                  alt="uk-flag"
-                  style={{ width: '20px' }} />
+                <img src={Ukflag} alt="uk-flag" className='w-5' />
               </IconButton>
               <IconButton>
                 <SearchOutlinedIcon />
@@ -94,7 +89,7 @@ function ResponsiveDrawer(props) {
                 size="large"
                 aria-label="show 4 new notifications"
                 color="default"
-                style={{ marginRight: "10px" }}
+                className='mr-3'
               >
                 <Badge badgeContent={4} color="error">
                   <NotificationsIcon />
@@ -106,12 +101,12 @@ function ResponsiveDrawer(props) {
                 </IconButton>
               </Tooltip>
               <Menu
-                sx={{ mt: '45px' }}
+                sx={{ mt: '45px'}}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
                 anchorOrigin={{
                   vertical: 'top',
-                  horizontal: 'right',
+                  horizontal: 'right'              
                 }}
                 keepMounted
                 transformOrigin={{
@@ -121,36 +116,24 @@ function ResponsiveDrawer(props) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <MenuItem
-                  style={{ padding: "10px 30px" }}
-                >
-                  <Avatar alt="Remy Sharp" src={Avataricon} style={{ marginRight: "10px" }} /> Anika visser <br />
+                <MenuItem className='my-10 mx-30'>
+                  <Avatar alt="Remy Sharp" src={Avataricon} style={{marginRight:"15px"}} /> Anika visser <br />
                   <span className="subTitle">Acme Inc</span>
                 </MenuItem>
-                <Divider
-                  style={{
-                    margin: "15px 0px",
-                    border: "1px solid #1c2436 !important",
-                    background: "#1c2436 !important"
-                  }} />
+                <Divider className='py-10 border-solid border-secondary'/>
                 {settings.map((setting, index) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}
-                    style={{ padding: "10px 30px" }}
+                    className="px-15 py-7"
                   >
-                    {index === 0 ? <AccountCircleIcon style={{ marginRight: "10px" }} /> : null}
-                    {index === 1 ? <SettingsIcon style={{ marginRight: "10px" }} /> : null}
-                    {index === 2 ? <CompareArrowsOutlinedIcon style={{ marginRight: "10px" }} /> : null}
-                    <Typography textAlign="center">{setting}</Typography>
+                    {index === 0 ? <AccountCircleIcon /> : null}
+                    {index === 1 ? <SettingsIcon /> : null}
+                    {index === 2 ? <CompareArrowsOutlinedIcon/> : null}
+                    <Typography textAlign="center" >{setting}</Typography>
                     { }
 
                   </MenuItem>
                 ))}
-                <Divider
-                  style={{
-                    margin: "15px 0px",
-                    border: "1px solid #1c2436 !important",
-                    background: "#1c2436 !important"
-                  }} />
+                <Divider className='py-10 border-solid border-secondary'/>
                 <MenuItem
                   style={{ padding: "10px 30px" }}
                 >

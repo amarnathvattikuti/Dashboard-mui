@@ -44,33 +44,18 @@ const ContentView = () => {
       <Toolbar />
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Item
-            style={{ boxShadow: "none" }}
-          >
-            <h1>Good Morning</h1>
+          <Item className="shadow-none">
+            <h1 className="text-3xl font-bold mt-8">Good Morning</h1>
           </Item>
         </Grid>
-        <Grid item xs={12} md={6}
-          style={{
-            paddingTop: "55px"
-          }}
-        >
-          <Item
-            style={{ boxShadow: "none", textAlign: "right"}}
-          >
+        <Grid item xs={12} md={6} className="pt-7">
+          <Item className="shadow-none text-right">
             <Button variant="outlined" startIcon={<AssessmentIcon />}
-              style={{
-                textTransform: "none",
-                borderRadius: "10px",
-                padding: "10px 25px"
-              }}
-            >
+             className="normal-case py-3 px-7 rounded-lg" >
               Reports
             </Button>
 
-            <FormControl
-              style={{ marginLeft: "15px" }}
-            >
+            <FormControl className="ml-4 mt-1">
               <InputLabel id="period">period</InputLabel>
               <Select
                 labelId="period"
@@ -78,7 +63,7 @@ const ContentView = () => {
                 value={period}
                 label="period"
                 onChange={handleChange}
-                style={{height:"45px", borderRadius: "10px"}}
+              className="rounded-lg h-12"
               >
                 <MenuItem value="Last week">Last week</MenuItem>
                 <MenuItem value="Last Month">Last Month</MenuItem>
@@ -89,83 +74,46 @@ const ContentView = () => {
         </Grid>
       </Grid>
       <Grid container
-        style={{
-          backgroundColor: "#5048e5",
-          color: "white",
-          padding: "50px",
-          borderRadius: "15px",
-          marginTop: "40px"
-        }}
-      >
+      className="bg-primary text-white p-20 rounded-lg mt-8">
         <Grid item xs={12} md={3} >
-          <Item
-            style={{ boxShadow: "none", background: "transparent" }}
-          >
-            <img src={headGraphic}
-              style={{ width: "90%" }}
-              alt="headGrap" />
+          <Item className="shadow-none bg-transparent" >
+            <img src={headGraphic} className="w-90" alt="headGrap" />
           </Item>
         </Grid>
-        <Grid item xs={12} md={9}
-          style={{ paddingLeft: "30px" }}
-        >
-          <Item
-            style={{ boxShadow: "none", background: "transparent" }}
-          >
-            <Chip label="New"
-              style={{
-                backgroundColor: "#10b981", color: "white"
-              }}
-            />
-            <h1 style={{ marginBottom: "0px", color: "#fff" }}
-            >Welcome to Material Kit Pro v5!</h1>
-            <p style={{ marginTop: "0px", color: "#fff" }}>
+        <Grid item xs={12} md={9} className="pl-3" >
+          <Item className="shadow-none bg-transparent">
+            <Chip label="New" className="bg-success text-white"/>
+            <h1 className="mb-2 mt-4 text-white text-3xl font-bold">
+            Welcome to Material Kit Pro v5!</h1>
+            <p className="mt-0 text-white">
               Your dashboard has been improved! Explore new features like Notifications, Search, Jobs Platform and more.</p>
-            <Button variant="contained"
-              style={{
-                backgroundColor: "#10b981",
-                textTransform: "none"
-              }}
-            >Dismiss Banner</Button>
+            <Button variant="contained" className="bg-success text-white normal-case mt-6"
+              >Dismiss Banner</Button>
           </Item>
         </Grid>
       </Grid>
 
-      <Grid container spacing={3}
-        style={{
-          margin: "50px 0px"
-        }}
-      >
-        <Grid item xs={12} md={6}
-          style={{ padding: "30px 10px" }}
-        >
+      <Grid container spacing={3} className="my-12">
+        <Grid item xs={12} md={6} className="py-3 px-1" >
           <Item>
             <Grid container spacing={3}>
               <Grid item xs={12} md={4}>
-                <Item
-                  style={{ boxShadow: "none" }}
-                >
+                <Item className="shadow-none" >
                   <Donut />
                 </Item>
               </Grid>
               <Grid item xs={12} md={8}>
-                <Item
-                  style={{ boxShadow: "none" }}
-                >
-                  <h2
-                    style={{ color: "#5048e5" }}
-                  >0.299 BTC</h2>
+                <Item className="shadow-none pt-7">
+                  <h2 className="text-primary font-bold text-3xl" >0.299 BTC</h2>
                   <p>Your crypto wallet</p>
                 </Item>
               </Grid>
             </Grid>
             <Divider />
             <Grid xs={12} md={8}>
-              <Item
-                style={{ boxShadow: "none" }}
-              >
+              <Item className="shadow-none">
                 <Button startIcon={<ArrowForwardIcon />}
-                  style={{ textTransform: "none" }}
+                  className="normal-case"
                 >
                   See all activity
                 </Button>
@@ -173,36 +121,26 @@ const ContentView = () => {
             </Grid>
           </Item>
         </Grid>
-        <Grid xs={12} md={6}
-          style={{ padding: "30px 10px" }}
-        >
+        <Grid xs={12} md={6}className="py-3 px-1">
           <Item>
             <Grid container spacing={3}>
               <Grid item xs={12} md={4}>
-                <Item
-                  style={{ boxShadow: "none" }}
-                >
+                <Item className="shadow-none">
                   <Donut />
                 </Item>
               </Grid>
               <Grid item xs={12} md={8}>
-                <Item
-                  style={{ boxShadow: "none" }}
-                >
-                  <h2
-                    style={{ color: "#10b981" }}
-                  >$21,500.00</h2>
+                <Item className="shadow-none pt-7">
+                  <h2 className="text-success font-bold text-3xl">$21,500.00</h2>
                   <p>Your private wallet</p>
                 </Item>
               </Grid>
             </Grid>
             <Divider />
             <Grid item xs={12} md={8}>
-              <Item
-                style={{ boxShadow: "none" }}
-              >
+              <Item className="shadow-none" >
                 <Button startIcon={<ArrowForwardIcon />}
-                  style={{ textTransform: "none" }}
+                  className="normal-case"
                 >
                   Withdraw money
                 </Button>
@@ -212,16 +150,12 @@ const ContentView = () => {
         </Grid>
       </Grid>
       <Grid>
-        <Item
-          style={{ boxShadow: "none" }}
-        >
+        <Item className="shadow-none" >
           <LatestTrans />
         </Item>
       </Grid>
-      <Grid style={{ margin: "50px 0px" }}>
-        <Item
-          style={{ boxShadow: "none" }}
-        >
+      <Grid className="my-12 mx-0">
+        <Item className="shadow-none">
           <Cards />
         </Item>
       </Grid>
