@@ -47,15 +47,15 @@ const DrawerCont = () => {
     return (
         <div>
             <img src={Logo}
-            className="my-4 mx-2" alt="logo" />
+             className="logo" alt="logo" />
             <ListItemButton
-             className="w-60 bg-lightdark m-auto py-4 px-5 h-20 rounded-md block"
+             className="btn-acme-leftbar"
             >
-                <h4 className="w-100 font-semibold text-white">Acme Inc </h4>
-                <p className="text-secondary text-sm opacity-70">Your tier : premium</p>
+                <h4 className="acme-text-large">Acme Inc </h4>
+                <p className="acme-text-small">Your tier : premium</p>
             </ListItemButton>
-            <Divider className="py-5 border-lightdark"/>
-            <div className="font-semibold pt-6 pl-6 text-xs text-secondary opacity-50">
+            <Divider className="hr"/>
+            <div className="text-xs">
                 GENERAL
             </div>
             <List>
@@ -77,7 +77,7 @@ const DrawerCont = () => {
                                 {
                                     index === 3 ?
                                         <Chip label="New" size="small"
-                                            className="bg-success text-white"
+                                            className="chip"
                                         /> : null
                                 }
                             </ListItemButton>
@@ -88,7 +88,7 @@ const DrawerCont = () => {
             </List>
 
             <List>
-                <div className="py-4 pl-5 text-xs text-secondary opacity-60">
+                <div className="text-xs">
                     MANAGEMENT
                 </div>
                 <AccordianList />

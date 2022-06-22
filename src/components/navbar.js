@@ -63,7 +63,7 @@ function ResponsiveDrawer(props) {
           className="bg-white shadow"
         >
           <Toolbar>
-            <Box sx={{ flexGrow: 1, display: { xl: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'inline-flex', xl: 'flex' } }}>
               <IconButton
                 color="default"
                 aria-label="open drawer"

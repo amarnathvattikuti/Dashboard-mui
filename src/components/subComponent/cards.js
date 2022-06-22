@@ -26,7 +26,7 @@ export default function Cards() {
     const newCardData = data.map((el) => {
         return (
             <>
-                <Grid item xs={12} md={6} key={el.id} className="py-4 px-4">
+                <Grid item xs={12} md={6} key={el.id} className="py-4 md:px-4">
                     <Item className="py-2 px-4">
                         <h4 className="text-primary">
                            {el.cardname === 'Jobs' ? <ShoppingBasketIcon/> : null}

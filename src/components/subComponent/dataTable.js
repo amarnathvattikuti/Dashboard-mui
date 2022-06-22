@@ -38,9 +38,9 @@ const UserTable = () => {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{flexGrow: 1, width: '100%' }}>
             <Grid container>
-                <Grid item xs={12} className="border-b border-b-silver">
+                <Grid item xs={12} sm={12} md={12} className="border-b border-b-silver">
                     <Tabs
                         value={value}
                         onChange={handleChange}
@@ -56,9 +56,9 @@ const UserTable = () => {
                     </Tabs>
                 </Grid>
             </Grid>
-            <Box sx={{ width: '100%' }}>
-                <Grid container>
-                    <Grid item xs={12} sm={9} className="py-4 px-2">
+            <Box sx={{flexGrow: 1, width: '100%' }}>
+                <Grid container spacing={{ xs: 1, md: 2 }} className="py-9">
+                    <Grid item xs={12} sm={6} md={9} className="py-3 md:pr-1">
                         <FormControl sx={{ m: 1, width: '100%' }} variant="outlined">
                             <InputLabel htmlFor="Search customers">Search customers</InputLabel>
                             <OutlinedInput
@@ -80,7 +80,7 @@ const UserTable = () => {
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item xs={12} sm={3} className="py-3 px-2 mt-3">
+                    <Grid item xs={12} sm={6} md={3} className="py-3 mt-2">
                         <FormControl fullWidth>
                             <InputLabel id="Sort">Sort</InputLabel>
                             <Select
@@ -98,8 +98,10 @@ const UserTable = () => {
                         </FormControl>
                     </Grid>
                 </Grid>
+                <Grid container spacing={{ xs: 1, md: 2 }}>
                 <Grid item xs={12}>
                     <CustomerDataTable/>
+                </Grid>
                 </Grid>
             </Box>
         </Box>

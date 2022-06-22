@@ -51,7 +51,7 @@ const ContentView = () => {
         <Grid item xs={12} md={6} className="pt-7">
           <Item className="shadow-none text-right">
             <Button variant="outlined" startIcon={<AssessmentIcon />}
-             className="normal-case py-3 px-7 rounded-lg" >
+              className="normal-case py-3 px-7 rounded-lg" >
               Reports
             </Button>
 
@@ -63,7 +63,7 @@ const ContentView = () => {
                 value={period}
                 label="period"
                 onChange={handleChange}
-              className="rounded-lg h-12"
+                className="rounded-lg h-12"
               >
                 <MenuItem value="Last week">Last week</MenuItem>
                 <MenuItem value="Last Month">Last Month</MenuItem>
@@ -74,7 +74,7 @@ const ContentView = () => {
         </Grid>
       </Grid>
       <Grid container
-      className="bg-primary text-white p-20 rounded-lg mt-8">
+        className="bg-primary text-white p-10 rounded-lg mt-8">
         <Grid item xs={12} md={3} >
           <Item className="shadow-none bg-transparent" >
             <img src={headGraphic} className="w-90" alt="headGrap" />
@@ -82,36 +82,36 @@ const ContentView = () => {
         </Grid>
         <Grid item xs={12} md={9} className="pl-3" >
           <Item className="shadow-none bg-transparent">
-            <Chip label="New" className="bg-success text-white"/>
+            <Chip label="New" className="bg-success text-white" />
             <h1 className="mb-2 mt-4 text-white text-3xl font-bold">
-            Welcome to Material Kit Pro v5!</h1>
+              Welcome to Material Kit Pro v5!</h1>
             <p className="mt-0 text-white">
               Your dashboard has been improved! Explore new features like Notifications, Search, Jobs Platform and more.</p>
             <Button variant="contained" className="bg-success text-white normal-case mt-6"
-              >Dismiss Banner</Button>
+            >Dismiss Banner</Button>
           </Item>
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} className="my-12">
-        <Grid item xs={12} md={6} className="py-3 px-1" >
+      <Grid container spacing={3} className="my-10 px-3 md:px-5">
+        <Grid item xs={12} md={6} className="py-3 px-4 ml-3 lg:ml-0 md:px-3">
           <Item>
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
               <Grid item xs={12} md={4}>
-                <Item className="shadow-none" >
+                <Item className="shadow-none">
                   <Donut />
                 </Item>
               </Grid>
               <Grid item xs={12} md={8}>
                 <Item className="shadow-none pt-7">
-                  <h2 className="text-primary font-bold text-3xl" >0.299 BTC</h2>
-                  <p>Your crypto wallet</p>
+                  <h2 className="text-center md:text-left text-primary font-bold text-3xl" >0.299 BTC</h2>
+                  <p className="text-center md:text-left">Your crypto wallet</p>
                 </Item>
               </Grid>
             </Grid>
             <Divider />
             <Grid xs={12} md={8}>
-              <Item className="shadow-none">
+              <Item className="shadow-none text-center md:text-left">
                 <Button startIcon={<ArrowForwardIcon />}
                   className="normal-case"
                 >
@@ -121,9 +121,9 @@ const ContentView = () => {
             </Grid>
           </Item>
         </Grid>
-        <Grid xs={12} md={6}className="py-3 px-1">
+        <Grid item xs={12} md={6} className="py-3 px-4 ml-3 lg:ml-0 md:px-3">
           <Item>
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
               <Grid item xs={12} md={4}>
                 <Item className="shadow-none">
                   <Donut />
@@ -131,14 +131,14 @@ const ContentView = () => {
               </Grid>
               <Grid item xs={12} md={8}>
                 <Item className="shadow-none pt-7">
-                  <h2 className="text-success font-bold text-3xl">$21,500.00</h2>
-                  <p>Your private wallet</p>
+                  <h2 className="text-center md:text-left text-success font-bold text-3xl">$21,500.00</h2>
+                  <p className="text-center md:text-left">Your private wallet</p>
                 </Item>
               </Grid>
             </Grid>
             <Divider />
             <Grid item xs={12} md={8}>
-              <Item className="shadow-none" >
+              <Item className="shadow-none text-center md:text-left" >
                 <Button startIcon={<ArrowForwardIcon />}
                   className="normal-case"
                 >
@@ -149,12 +149,12 @@ const ContentView = () => {
           </Item>
         </Grid>
       </Grid>
-      <Grid>
+      <Grid item xs={12}>
         <Item className="shadow-none" >
           <LatestTrans />
         </Item>
       </Grid>
-      <Grid className="my-12 mx-0">
+      <Grid item xs={12} className="my-12 mx-0">
         <Item className="shadow-none">
           <Cards />
         </Item>
